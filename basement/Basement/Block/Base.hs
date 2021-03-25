@@ -39,6 +39,7 @@ module Basement.Block.Base
 import           GHC.Prim
 import           GHC.Types
 import           GHC.ST
+import           Unsafe.Coerce
 import           GHC.IO
 import qualified Data.List
 import           Basement.Compat.Base
