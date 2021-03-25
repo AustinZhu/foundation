@@ -93,7 +93,7 @@ instance (Functor m, Monad m) => Monad (Pipe l i o u m) where
 -- underlying @monad@, and produces a value of @result@ when no more
 -- output data is available.
 newtype Conduit input output monad result = Conduit
-    { unConduit :: forall a .  (result -> Pipe input input output () monad a) -> Pipe input input output () monad a
+    { unConduit :: (result -> Pipe input input output () monad a) -> Pipe input input output () monad a
     }
 
 instance Functor (Conduit i o m) where
